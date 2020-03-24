@@ -1,0 +1,57 @@
+<swiper style="height:{{height}}px">
+  <swiper-item>
+    <image src="../../images/photo.jpg" mode="widthFix" class="photo"></image>
+    <view class="cover-info">
+      <text class="cover-name">{{name}}</text>
+      <text class="cover-spell">{{spell}}</text>
+    </view>
+    <view class="big-circle"></view>
+    <view class="medium-circle"></view>
+    <view class="small-circle"></view>
+    <view class="cover-work">
+      <text class="cover-job">{{job}}</text>
+      <text class="cover-exp">{{exp}}</text>
+    </view>
+    <view class="nav">
+      我的简历
+      <image src="../../images/arrow_right.png" class="arrow-right"></image>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view scroll-y="true" style="width:{{width}}px;height:{{height}}px">
+      <view class="resume">
+        <view class="section">
+          <view class="section-info">
+            <view class="section-seq">1</view>
+            <text class="section-title">基本资料</text>
+          </view>
+          <view class="column col2">
+            <text class="info">姓名：{{name}}</text>
+            <text class="info">电话：{{tel}}</text>
+          </view>
+          <view class="column col2">
+            <text class="info">性别：{{sex}}</text>
+            <text class="info">年龄：{{age}}</text>
+          </view>
+          <view class="column col1">
+            <text class="info">邮箱：{{email}}</text>
+          </view>
+          <view class="column col1">
+            <text class="info">地址：{{address}}</text>
+          </view>
+        </view>
+        <view class="section">
+          <view class="section-info">
+            <view class="section-seq">2</view>
+            <text class="section-title">主要技能</text>
+          </view>
+          <view class="skill" wx:for="{{skill}}" wx:key="item">
+            <text class="skill-name">{{item.name}}</text>
+            <progress class="progress" stroke-width="5" percent="{{item.percent}}"/>
+          </view>
+        </view>
+        <view class="section"></view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>
